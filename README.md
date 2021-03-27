@@ -1,4 +1,4 @@
-# ViewSQL - GitHub Pagr
+# ViewSQL - GitHub Page
 This is the (yet) incomplete Source-code of the download- and FAQ Page
 
 ## License
