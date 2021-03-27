@@ -1,0 +1,10 @@
+{
+    "startup": {
+        "args": "startup",
+        "description": "Prepare the application"
+    },
+    "create main": {
+        "args": "create-main",
+        "description": "Create the main window"
+    }
+}
