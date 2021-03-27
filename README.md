@@ -1,5 +1,6 @@
 # ViewSQL
 Desktop GUI for MySQL and SQLite Databases 
+
 _(Bonus-project for IT lessons in my school)_
 
 ## License
