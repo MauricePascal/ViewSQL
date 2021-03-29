@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 import * as fs from "fs";
 import * as utils from "./utils";
@@ -6,7 +6,7 @@ import * as startup from "./startup";
 
 export const start_params = JSON.parse(fs.readFileSync(__dirname.replace("dist", "")+"start_parameter.json").toString());
 
-export const windows = new Map();
+export const windows:Map<string, BrowserWindow> = new Map<string, BrowserWindow>();
 
 export function start(params: string[]) {
   if(params.length == 0 || params == undefined || params == null) {
@@ -14,7 +14,8 @@ export function start(params: string[]) {
   }
   switch(params[0]) {
     case "startup":
-      startup.startup();
+      startup.startup(); //Prepare the application
+
       // Create the browser window.
       const startup_window = new BrowserWindow({
         height: 600,
@@ -22,6 +23,13 @@ export function start(params: string[]) {
           preload: path.join(__dirname, "preload.js"),
         },
         width: 800,
+        frame: false,
+        resizable: false,
+        minimizable: false,
+        alwaysOnTop: true,
+        fullscreenable: false,
+        maximizable: false,
+        skipTaskbar: true
       });
     
       // and load the index.html of the app.
@@ -29,18 +37,26 @@ export function start(params: string[]) {
       windows.set("startup", startup_window);
       break;
     case "create-main":
+      //Get screen sizes
+      const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+    
       // Create the browser window.
       const main_window = new BrowserWindow({
-        height: 600,
         webPreferences: {
           preload: path.join(__dirname, "preload.js"),
         },
-        width: 800,
+        width: width-100,
+        height: height-100,
+        minHeight: height-200,
+        minWidth: width-200,
+        autoHideMenuBar: true
       });
 
+      //Maximize the main menu of the application
+      main_window.maximize();
+
       // Close the startup window
-      const startup_win:BrowserWindow = windows.get("startup");
-      startup_win.close();
+      windows.get("startup").close();
     
       // and load the index.html of the app.
       main_window.loadFile(path.join(__dirname, "../index.html"));
