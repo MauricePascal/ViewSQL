@@ -6,6 +6,7 @@ Desktop GUI for MySQL and SQLite Databases
 2. [Introduction](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#introduction)
 3. [Download](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#downloads)
 4. [Setup](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#setup)
+5. [License](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#license)
 
 ## Foreword
 This program is just a school project - Use at your own risk. 
