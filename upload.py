@@ -1,12 +1,13 @@
+from git import Repo
 import sys
-import os
-import time
 
 version = sys.argv[1]
-os.system("cmd /c git pull origin downloads")
-time.sleep(1)
-os.system("cmd /c git add .")
-time.sleep(1)
-os.system(f"cmd /c git commit -m \"Added {version}\"")
-time.sleep(1)
-os.system("cmd /c git push -u origin downloads")
+try:
+    repo = Repo("D:\\Development and Engineering\\JavaScript_TypeScript\\ViewSQL\\downloads\\.git")
+    repo.git.add(update=True)
+    repo.index.commit(f'Added {version}')
+    repo.head.set_reference("downloads")
+    origin = repo.remote(name='origin')
+    origin.push()
+except Exception:
+    print('Some error occured while pushing the code')
