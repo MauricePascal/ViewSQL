@@ -18,4 +18,4 @@ zipf = zipfile.ZipFile(f'../downloads/ViewSQL-{version}.zip', 'w', zipfile.ZIP_D
 zipdir('./', zipf)
 zipf.close()
 time.sleep(5)
-result = subprocess.check_output(f"py ../downloads/upload.py {version}".split(" "), shell=True)
+result = subprocess.check_output(["C:/Program Files/Git/git-bash.exe", "../downloads/upload.sh"], shell=True)
