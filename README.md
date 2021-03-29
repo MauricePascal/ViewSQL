@@ -18,7 +18,7 @@ This program is just a school project - Use at your own risk.
 _There's nothing to see yet_
 
 ## Downloads
-Visit [the project homepage](https://mauricepascal.github.io/ViewSQL/downloads.html) to get the download files
+Visit <a href="https://mauricepascal.github.io/ViewSQL/downloads.html">the project homepage</a> to get the download files
 
 ## Setup
 _There's nothing to see yet_
