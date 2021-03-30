@@ -5,8 +5,9 @@ Desktop GUI for MySQL and SQLite Databases
 1. [Foreword and further project information](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#foreword)
 2. [Introduction](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#introduction)
 3. [Download](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#downloads)
-4. [Setup](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#setup)
-5. [License](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#license)
+4. [Requirements](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#requirements)
+5. [Setup](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#setup)
+6. [License](https://github.com/MauricePascal/ViewSQL/blob/main/README.md#license)
 
 ## Foreword
 This program is just a school project - Use at your own risk. 
@@ -19,6 +20,10 @@ _There's nothing to see yet_
 
 ## Downloads
 Visit <a href="https://mauricepascal.github.io/ViewSQL/downloads.html" target="_blank">the project homepage</a> to get the download files
+
+## Requirements
+You need the [Node.js Framework](https://nodejs.org).<br>
+Node.js automatically installs the required packagemanager [NPM](https://npmjs.com).
 
 ## Setup
 _There's nothing to see yet_
